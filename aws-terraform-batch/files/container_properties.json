@@ -1,0 +1,13 @@
+{
+    "image": "${container_image}",
+    "command" :  ["python" , "src/validation.py"],
+    "fargatePlatformConfiguration": {
+      "platformVersion": "${fargate_platform_version}"
+    },
+    "resourceRequirements": [
+      {"type": "VCPU", "value": "${container_vcpu}"},
+      {"type": "MEMORY", "value": "${container_memory}"}
+    ],
+    "executionRoleArn": "${container_executionRoleArn}",
+    "jobRoleArn": "${container_jobRoleArn}"
+  }
